@@ -1,22 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import recipe from "../../assets/recipe.png";
 import { Link } from "react-router-dom";
-import Nav, { MenuLink } from "./Navbar.styled";
+import Nav, { Menu, MenuLink ,Ul } from "./Navbar.styled";
+import { FcAddDatabase } from "react-icons/fc";
 
 const Navbar = () => {
+  const [show, setShow] = useState(false)
+  
+  
+
   return (
     <Nav justify='space-between' wrap='wrap'>
-      <div>
         <Link to='/'>
-          <img style={{ width: "100px" }} src={recipe} alt='recipe' />
+          <img style={{ width: "80px" ,borderRadius:"20px"}} src={recipe} alt='recipe' />
         </Link>
-      </div>
-      <ul>
+        <Menu >
+          <span onClick={()=>setShow(!show)}><FcAddDatabase/></span>
+        </Menu>
+      <Ul show={show} onClick={()=>setShow(false)}>
         <MenuLink to='/'>Home</MenuLink>
         <MenuLink to='/about'>About</MenuLink>
         <MenuLink to='/register'>Register</MenuLink>
-        <MenuLink to='/login'>Login</MenuLink>
-      </ul>
+        <MenuLink to='/login' onClick={()=>sessionStorage.clear()} >Logout</MenuLink>
+      </Ul>
     </Nav>
   );
 };
