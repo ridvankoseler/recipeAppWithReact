@@ -31,6 +31,7 @@ export const Ul = styled(Flex)`
     width: 100%;
     max-height: ${({show})=>show ? "400px" :"0"};
     overflow:hidden;
+    transition: max-height 0.4s ease-in;
   }
 `;
 
@@ -44,6 +45,7 @@ export const MenuLink = styled(Link)`
     font-weight: bold;
   }
   @media (max-width: ${({ theme }) => theme.screens.md}) {
-    
+    border-bottom: 1px solid greenyellow;
+    width: 100%;
   }
 `;
