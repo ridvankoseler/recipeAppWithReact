@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from "axios"
 import Header from '../../components/header/Header'
 const Home = () => {
+  const mealType = ['Breakfast' , 'Lunch' , 'Dinner', 'Snack' , 'Teatime']
   const [query, setQuery] = useState("egg")
   const [selectedMeal, setSelectedMeal] = useState("breakfast")
   const [recipes, setRecipes] = useState("")
@@ -25,7 +26,7 @@ const Home = () => {
   
   return (
     <div>
-      <Header/>
+      <Header setQuery={setQuery} setSelectedMeal={setSelectedMeal}/>
     </div>
   )
 }

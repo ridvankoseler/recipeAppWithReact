@@ -1,16 +1,31 @@
-import {HeaderContainer} from "./Header.styled"
+import {
+  FoodInput,
+  FormContainer,
+  HeaderContainer,
+  MainHeader,
+  Button,
+  Select,
+} from "./Header.styled";
 
-const Header = () => {
+const Header = ({ setQuery , setSelectedMeal}) => {
   return (
     <HeaderContainer>
-        <MainHeader>RECİPE APP</MainHeader>
-            <FormContainer>
-                <FoodInput>
-
-                </FoodInput>
-            </FormContainer>
+      <MainHeader>RECİPE APP</MainHeader>
+      <FormContainer>
+        <FoodInput
+          type='text'
+          placeholder='search'
+          onChange={(e) => setQuery(e.target.value)}
+        />
+        <Button type='submit'></Button>
+        <Select
+          name='mealType'
+          id='mealType'
+          onChange={(e) => setSelectedMeal(e.target.value)}
+        ></Select>
+      </FormContainer>
     </HeaderContainer>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
