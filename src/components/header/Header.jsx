@@ -7,22 +7,37 @@ import {
   Select,
 } from "./Header.styled";
 
-const Header = ({ setQuery , setSelectedMeal}) => {
+const Header = ({ setQuery , setSelectedMeal, mealType ,getData}) => {
+  const handleSubmit = (e)=>{
+    e.preventDefault()
+    getData()
+  }
   return (
     <HeaderContainer>
       <MainHeader>RECİPE APP</MainHeader>
-      <FormContainer>
+      <FormContainer onSubmit={handleSubmit}>
         <FoodInput
           type='text'
           placeholder='search'
           onChange={(e) => setQuery(e.target.value)}
         />
-        <Button type='submit'></Button>
+        <Button type='submit'>SEARCH</Button>
         <Select
           name='mealType'
           id='mealType'
           onChange={(e) => setSelectedMeal(e.target.value)}
-        ></Select>
+        >
+          {
+            mealType.map((meal,index)=>{
+              return (
+                <option key={index} value=''>
+                  {meal.toLowerCase()}
+                </option>
+              );
+              
+            })
+          }
+        </Select>
       </FormContainer>
     </HeaderContainer>
   );
