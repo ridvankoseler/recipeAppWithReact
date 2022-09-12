@@ -17,7 +17,9 @@ const AppRouter = () => {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path="register" element={<Register/>}/>
+
         <Route path="about" element={<PrivateRouter/>}>
+          {/* about ismi gelirse linke privateRouter çağır. user bilgisi varsa outlet çağrıyor */}
           <Route path='' element={<About />} />
         </Route>
         <Route path="detail" element={<PrivateRouter/>}>

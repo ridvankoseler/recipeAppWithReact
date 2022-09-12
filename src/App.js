@@ -9,6 +9,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <AppRouter/>
+      {/* burada appRouter ı çağırmamız gerekiyor */}
     </ThemeProvider>
   );
 }

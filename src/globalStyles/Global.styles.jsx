@@ -1,4 +1,6 @@
 import { createGlobalStyle } from "styled-components";
+//Glocal Style için bu şekilde createGlobalStyle hazırlıyoruz.
+//Tüm body nin stilleriburaya yazarız
 
 export const GlobalStyles = createGlobalStyle`
   *{
