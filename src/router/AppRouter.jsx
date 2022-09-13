@@ -22,9 +22,11 @@ const AppRouter = () => {
           {/* about ismi gelirse linke privateRouter çağır. user bilgisi varsa outlet çağrıyor */}
           <Route path='' element={<About />} />
         </Route>
+
         <Route path="detail" element={<PrivateRouter/>}>
           <Route path='' element={<Detail />} />
         </Route>
+        
         <Route path='/login' element={<Login />} />
       </Routes>
     </BrowserRouter>

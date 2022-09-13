@@ -18,7 +18,7 @@ const Header = ({ setQuery , setSelectedMeal, mealType ,getData}) => {
       <FormContainer onSubmit={handleSubmit}>
         <FoodInput
           type='text'
-          placeholder='search'
+          placeholder='Search'
           onChange={(e) => setQuery(e.target.value)}
         />
         <Button type='submit'>SEARCH</Button>

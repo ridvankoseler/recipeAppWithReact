@@ -13,6 +13,8 @@ const Home = () => {
   const APP_ID = "e4feea44";
   const APP_KEY = "7b8e8ffe84ef720248665bf5349e043b";
   const url = `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&mealType=${selectedMeal}`;
+  //query sayfadaki search arama kısmına yazdığımız değerdir.
+  //SelectedMeal sayfadaki türlerdir.
 
   const getData = async () => {
     if (query) {

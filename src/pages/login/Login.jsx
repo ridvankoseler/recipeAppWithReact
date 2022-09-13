@@ -13,6 +13,7 @@ const Login = () => {
     e.preventDefault();
     sessionStorage.setItem("user", JSON.stringify(userInfo));
     navigate(-1);
+    //navigate ile home yönledirdik logine giriş yapılınca
   };
   return (
     <LoginContainer>
@@ -27,16 +28,26 @@ const Login = () => {
             />
           </div>
           <div className='d-flex flex-column text-center'>
-            <label className='text-success' placeholder='username' htmlFor=''>
-              Username
-            </label>
-            <input type='text' name='text' id='text' />
+            <label className='text-success'>Username</label>
+            <input
+              type='text'
+              name='text'
+              id='text'
+              placeholder='UserName'
+              required
+            />
           </div>
           <div className='d-flex flex-column text-center'>
             <label className='text-primary' htmlFor=''>
               Password
             </label>
-            <input type='password' name='' id='' />
+            <input
+              type='password'
+              name=''
+              id=''
+              placeholder='Password'
+              required
+            />
           </div>
           <div className='text-center mt-2'>
             <button

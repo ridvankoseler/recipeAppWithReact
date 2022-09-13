@@ -30,6 +30,7 @@ export const FoodInput = styled.input`
   text-indent: 10px;
   margin: 5px;
   font-size: 2rem;
+  background-color: #e1f1dd;
 `;
 
 export const Button = styled.button`
@@ -56,4 +57,5 @@ export const Select = styled.select`
   height: 3rem;
   border: none;
   font-size: 2rem;
+  background-color: #e1f1dd;
 `;
