@@ -3,7 +3,7 @@ import axios from "axios";
 import homeSvg from "../../assets/a.png";
 import Header from "../../components/header/Header";
 import Cards from "../../components/cards/Cards";
-import { HomeImg, ImgDiv } from "./Home.styled";
+import { HeaderText, HomeImg, ImgDiv } from "./Home.styled";
 const Home = () => {
   const mealType = ["Breakfast", "Lunch", "Dinner", "Snack", "Teatime"];
   const [query, setQuery] = useState("egg");
@@ -28,7 +28,7 @@ const Home = () => {
       alert("Please Enter your meal");
     }
   };
-  console.log(recipes);
+  // console.log(recipes);
   return (
     <div>
       <Header
@@ -43,7 +43,8 @@ const Home = () => {
         </ImgDiv>
       )}
 
-      {recipes?.length === 0 && (<p>The Food can not be found</p>)}
+      {recipes?.length === 0 && (<HeaderText>The Food can not be found</HeaderText>)}
+      {/*  ? recipe varsa length e bak demiş oluyoruz. */}
 
       {recipes?.length > 0 && <Cards recipes={recipes} />}
     </div>

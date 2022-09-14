@@ -7,23 +7,31 @@ const Cards = ({recipes}) => {
   return (
     <MainContainer wrap='wrap'>
       {
-        recipes.map(({recipe},index)=>{
-          const {label} = recipe
+        //Bir sürü kartımız var recipes içindeki bilgileri karta yazdırmak için içinde dolaşıyoruz o yüzden recipesi mapledik
+        recipes.map(({ recipe }, index) => {
+          // {recipe} bunu yaparak recipes içindeki recipeleri açtık yolda desctranting yaptık.
+          const { label } = recipe;
+          // recipe de destctranting yaptık içindeki labeli aldık.
           return (
-            <Card >
+            <Card key={index}>
               <Header>{label}</Header>
               <Image src={recipe.image || defaultImage} />
-              <Button onClick={()=>navigate('detail', {state:recipe ,replace:false})}>View More</Button>
+              <Button
+                onClick={() =>
+                  navigate("detail", { state: recipe, replace: false })
+                  //navigate tek paremetre verirsek gideceği url alır ikinci paremetre yazarsak göndereceğimiz state'i alır. 
+                  //history siler replace tek başına da kullanılabilr.veya replace:true de olur o zaman history silinir.
+                }
+              >
+                View More
+              </Button>
               {/* //replace history siler */}
-             </Card>
-          )
+            </Card>
+          );
         })
       }
-      
-
-      
     </MainContainer>
-  )
+  );
 }
 
 export default Cards

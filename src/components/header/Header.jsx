@@ -12,6 +12,7 @@ const Header = ({ setQuery , setSelectedMeal, mealType ,getData}) => {
     e.preventDefault()
     getData()
   }
+  
   return (
     <HeaderContainer>
       <MainHeader>RECİPE APP</MainHeader>
@@ -30,8 +31,8 @@ const Header = ({ setQuery , setSelectedMeal, mealType ,getData}) => {
           {
             mealType.map((meal,index)=>{
               return (
-                <option key={index} value=''>
-                  {meal.toLowerCase()}
+                <option key={index} value={meal.toLowerCase()}>
+                  {meal}
                 </option>
               );
               
