@@ -10,8 +10,10 @@ const Home = () => {
   const [selectedMeal, setSelectedMeal] = useState(mealType[0]);
   const [recipes, setRecipes] = useState(null);
 
-  const APP_ID = "e4feea44";
-  const APP_KEY = "7b8e8ffe84ef720248665bf5349e043b";
+  const APP_ID = process.env.REACT_APP_APP_ID
+  const APP_KEY = process.env.REACT_APP_APP_KEY
+
+
   const url = `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&mealType=${selectedMeal}`;
   //query sayfadaki search arama kısmına yazdığımız değerdir.
   //SelectedMeal sayfadaki türlerdir.

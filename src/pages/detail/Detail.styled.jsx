@@ -14,10 +14,11 @@ export const DetailPart = styled(Flex)`
   border: 1px solid white;
   border-radius: 5px;
   background-color: #e1f1dd;
+  
 `;
 
 export const ImgContainer = styled.div`
-  border: 1px solid #00adb5;
+  border: 2px solid #061516;
   padding: 10px;
   border-radius: 3px;
   margin: 2rem;
@@ -46,5 +47,9 @@ export const OtherPart = styled.div`
   width: 400px;
   text-align: right;
   font-size: 1.8rem;
-  margin: 2rem;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
