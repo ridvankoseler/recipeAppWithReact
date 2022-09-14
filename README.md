@@ -14,4 +14,4 @@ https://recipe-app-with-react.vercel.app/
 👉 React Router<br>
 👉 Styled Components<br>
 
-![Animation LoremIpsum.gif](https://github.com/ridvankoseler/LoremIpsumWithReact/blob/c0b5523e84df16186c8ffeef39a5add619933421/Animation%20LoremIpsum.gif)
+![AnimationRecipeApp.gif](https://github.com/ridvankoseler/recipeAppWithReact/blob/49685b3d66ed944e2761e7510104d4fb355a68c8/AnimationRecipeApp.gif)
